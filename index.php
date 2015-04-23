@@ -1,9 +1,10 @@
 ﻿<?php
 
 /**
- * Our text is protected by WP Copy Tag ! Proudly brought to you by YOOPlugins.com!
+ * Nothing much to see here !
  */
 
 ?>
+
 <br /><br />
-<center>Protect your valuable online content with <a href="http://yooplugins.com/downloads/wp-content-copy-protection-pro/">WordPress Content Copy Protection (Ultimate Edition)</a>. The complete content protection plugin for WordPress. Proudly brought to you by YOOPlugins.com</center>
+<center>Do you need help fixing your WordPress issues ? <a href="http://wpemergencyroom.com">WP Emergency Room</a> gives you full access to your own personal WordPress support team for any small WordPress related fixes and tasks.</center>

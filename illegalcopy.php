@@ -1,10 +1,10 @@
 <?php
 
 /*
-  Plugin Name: WP Illegal Copy Notice Append
+  Plugin Name: WP Illegal Content Copy Notice Append
   Plugin URI: http://yooplugins.com/
-  Description: This plugin appends a notice/warning along with a credit link from the original source, to any content that is illegally copied from your site (including content that is copied from your feeds by content scrapers). Works silently in background. See <a href="options-general.php?page=wpct_options">Settings > WP Illegal Copy Notice Append </a>
-  Version: 1.0.1
+  Description: This plugin appends a notice/warning along with a credit link from the original source, to any content that is illegally copied from your site (including content that is copied from your feeds by content scrapers). Works silently in background. See <a href="options-general.php?page=wpct_options">Settings > WP Illegal Content Copy Notice Append </a>
+  Version: 1.1
   Author: RSPublishing
   Author URI: http://yooplugins.com/
   License: GPLv2 or later
@@ -12,7 +12,7 @@
  */
 
 /*
-  Copyright 2015 Rynaldo Stoltz (email: support@yooplugins.com | web: http://yooplugins.com/)
+  Copyright 2015 Rynaldo Stoltz (email: rcstoltz@gmail.com | web: http://yooplugins.com/)
 
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -34,23 +34,23 @@
 }
 
 function bld_menu() {
-	add_options_page('WP Illegal Copy Notice', 'WP Illegal Copy Notice Append', 'manage_options', 'wpct_options', 'return_confs');
+	add_options_page('WP Illegal Content Copy Notice', 'WP Illegal Content Copy Notice', 'manage_options', 'wpicc_options', 'return_wpicc_conf');
 }
 
-function return_confs() {
+function return_wpicc_conf() {
 	require_once('settings.php');
 }
 
-function wpct_conf_link($links) {
-  $settings_link = '<a href="options-general.php?page=wpct_options">Settings</a>';
+function wpicc_conf_link($links) {
+  $settings_link = '<a href="options-general.php?page=wpicc_options">Settings</a>';
   array_unshift($links, $settings_link);
   return $links;
 }
 
 $plugin = plugin_basename(__FILE__);
-add_filter("plugin_action_links_$plugin", 'wpct_conf_link' );
+add_filter("plugin_action_links_$plugin", 'wpicc_conf_link' );
 
-function rate_wpct($links, $file) {
+function rate_wpicc($links, $file) {
 	if ($file == plugin_basename(__FILE__)) {
 		$rate_url = 'http://wordpress.org/support/view/plugin-reviews/' . basename(dirname(__FILE__)) . '?rate=5#postform';
 		$links[] = '<a href="' . $rate_url . '" target="_blank" title="Click here to rate and review this plugin on WordPress.org">Rate this plugin</a>';
@@ -65,14 +65,14 @@ function add_feed_content($content) {
 
 add_filter('the_excerpt_rss', 'add_feed_content');
 add_filter('the_content_feed', 'add_feed_content');
-add_filter('plugin_row_meta', 'rate_wpct', 10, 2);
+add_filter('plugin_row_meta', 'rate_wpicc', 10, 2);
 add_action('wp_head', 'append_copy');
 
 function append_copy() {
 
 ?>
 
-<!-- WP Illegal Copy Notice script by Rynaldo Stoltz Starts - http://yooplugins.com/ -->
+<!-- WP Illegal Content Copy Notice script by Rynaldo Stoltz Starts - http://yooplugins.com/ -->
 
 
 <script type="text/javascript">
@@ -94,7 +94,7 @@ function addTag() {
 			document.oncopy = addTag;
 </script>
 
-<!-- WP Illegal Copy Notice script by Rynaldo Stoltz Ends - http://yooplugins.com/ -->
+<!-- WP Illegal Content Copy Notice script by Rynaldo Stoltz Ends - http://yooplugins.com/ -->
 
 
 <?php } ?>
