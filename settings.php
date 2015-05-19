@@ -7,9 +7,10 @@
 	font-family: Arial;
 		}
 	</style>
-<hr /> <i>Hooray ! This plugin has no settings/configurations.<hr />
+	<hr /> <i>Hooray ! This plugin has no settings/configurations.<hr />
+		<hr /><font color="green">To test that this plugin works - Go ahead and copy/paste any text from you site ... <hr /></font>
 	   <font color="red">Please know that this plugin does not stop your content from being copied. WP Illegal Copy Notice Append simply adds a notice/warning to any content that is illegally copied from your site (feeds included), with a credit link to the original source. If you are looking for a way to protect your content (text, images and source code), from being copied, then <a href="http://yooplugins.com/downloads/wp-content-copy-protection-pro/">WP Content Copy Protection Pro</a> might help you !</font><hr />
-	   Do you need help fixing your WordPress issues? <a href="http://wpemergencyroom.com">WP Emergency Room</a> gives you full access to your own personal support team for just about any small WordPress related fixes and tasks.<br /><hr />
+	   Having problems with your site ? Do you have a WordPress issue/error or task that you need help with ? <a href="http://wpemergencyroom.com">WP Emergency Room</a> gives you full access to your own personal support team for just about any small WordPress related fixes and tasks.<br /><hr />
 			<br />
 	  Please consider making a small donation to help us maintain, update and keep our plugins alive, and YOUR content safe! We appreciate your support!</i> <br></br>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">

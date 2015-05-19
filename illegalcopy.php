@@ -4,7 +4,7 @@
   Plugin Name: WP Illegal Content Copy Notice Append
   Plugin URI: http://yooplugins.com/
   Description: This plugin appends a notice/warning along with a credit link from the original source, to any content that is illegally copied from your site (including content that is copied from your feeds by content scrapers). Works silently in background. See <a href="options-general.php?page=wpct_options">Settings > WP Illegal Content Copy Notice Append </a>
-  Version: 1.1
+  Version: 1.2
   Author: RSPublishing
   Author URI: http://yooplugins.com/
   License: GPLv2 or later
@@ -30,14 +30,14 @@
  */
 
  if(is_admin()) {
-	add_action('admin_menu', 'bld_menu');
+	add_action('admin_menu', 'bld_iccna_menu');
 }
 
-function bld_menu() {
-	add_options_page('WP Illegal Content Copy Notice', 'WP Illegal Content Copy Notice', 'manage_options', 'wpicc_options', 'return_wpicc_conf');
+function bld_iccna_menu() {
+	add_options_page('WP Illegal Content Copy Notice', 'WP Illegal Content Copy Notice', 'manage_options', 'wpicc_options', 'return_iccna_conf');
 }
 
-function return_wpicc_conf() {
+function return_iccna_conf() {
 	require_once('settings.php');
 }
 
